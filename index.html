@@ -17,7 +17,7 @@
 
     <main>
         <!-- Main Content Container -->
-        <div class="flex flex-col md:flex-row">
+        <div>
             <!-- Shape Card Container -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Triangle Card -->
@@ -82,18 +82,36 @@
                     </div>
                 </div>
             </div>
-            <!-- Shape Card Container -->
 
-            <!-- Area Calculation Container -->
-            <div class="min-w-96 border-4 border-gray-700 rounded-xl ">
-                <h1 class="text-3xl text-center">Area Calculation</h1>
+
+            <!-- Rhombus Card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="images/rhombus.png" alt="rhombus" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Rhombus</h2>
+                  <p class="text-center">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                  <div class="">
+                    <input type="text" placeholder="d1" class="w-24 text-2xl p-2 rounded-xl" id="diagonal1Input">
+                    <span>cm</span>
+                    <input type="text" placeholder="d2" class="w-24 text-2xl p-2 rounded-xl" id="diagonal2Input">
+                    <span>cm</span>
+                  </div>
+                  <div>
+                    <p class="text-2xl">Area: <span id="rhombusArea">0</span><span>cm<sup>2</sup></span></p>
+                  </div>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary w-full" onclick="calculateRhombusArea()">Calculate</button>
+                  </div>
+                </div>
             </div>
-            <!-- Area Calculation Container -->
+        </div>
+            <!-- Shape Card Container -->
         </div>
     </main>
 
     <script src="scripts/triangle-calculate.js"></script>
     <script src="scripts/rectangle-calculate.js"></script>
     <script src="scripts/parallelogram-calculator.js"></script>
+    <script src="scripts/rhombus-alculator.js"></script>
 </body>
 </html>
